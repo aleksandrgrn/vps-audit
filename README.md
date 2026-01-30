@@ -6,6 +6,8 @@
 
 Универсальный Bash-скрипт для быстрой диагностики VPS-серверов. Совместим с **Ubuntu/Debian** и **RHEL/CentOS/Rocky**.
 
+![Пример вывода](assets/screenshot.png)
+
 ## 🚀 Быстрый старт
 
 ```bash
