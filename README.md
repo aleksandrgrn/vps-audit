@@ -11,8 +11,16 @@
 ## 🚀 Быстрый старт
 
 ```bash
-curl -sL https://raw.githubusercontent.com/aleksandrgrn/vps-audit/main/audit.sh | bash
+curl -sL https://is.gd/LLoGt2 | bash
 ```
+
+<details>
+<summary>Альтернативная ссылка (полная)</summary>
+
+```bash
+curl -sL https://raw.githubusercontent.com/aleksandrgrn/vps-audit/master/audit.sh | bash
+```
+</details>
 
 ## 📋 Что проверяет
 
