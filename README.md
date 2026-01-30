@@ -1,5 +1,9 @@
 # 🔍 VPS Audit
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+[![One-liner](https://img.shields.io/badge/curl%20%7C%20bash-ready-brightgreen.svg)](https://raw.githubusercontent.com/aleksandrgrn/vps-audit/master/audit.sh)
+
 Универсальный Bash-скрипт для быстрой диагностики VPS-серверов. Совместим с **Ubuntu/Debian** и **RHEL/CentOS/Rocky**.
 
 ## 🚀 Быстрый старт
