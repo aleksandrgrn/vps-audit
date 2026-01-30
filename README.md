@@ -11,33 +11,47 @@
 ## 🚀 Быстрый старт
 
 ```bash
-curl -sL https://is.gd/LLoGt2 | bash
+curl -sL https://is.gd/LLoGt2 | sudo bash
 ```
 
 <details>
 <summary>Альтернативная ссылка (полная)</summary>
 
 ```bash
-curl -sL https://raw.githubusercontent.com/aleksandrgrn/vps-audit/master/audit.sh | bash
+curl -sL https://raw.githubusercontent.com/aleksandrgrn/vps-audit/master/audit.sh | sudo bash
 ```
 </details>
 
 ## 📋 Что проверяет
 
-| Проверка | Описание |
-|----------|----------|
-| 🖥 Виртуализация | KVM/VMware/Xen — подходит ли для Docker/WireGuard |
-| 🌊 RX Ring Buffer | Размер сетевого буфера (риск потери пакетов) |
-| 🔊 Broadcast Storm | Уровень шума в сети (3 сек замер) |
-| 📬 Порты | SMTP (25/465), HTTP (80), HTTPS (443) |
-| 🚀 YABS Benchmark | Полный тест CPU/Disk/Network |
+| Категория | Проверки |
+|-----------|----------|
+| 📋 **Система** | Kernel, ОС, тип виртуализации (KVM/VMware/Xen) |
+| 💾 **Ресурсы** | RAM, Swap, OOM Killer история |
+| ⚡ **CPU** | Модель, ядра, CPU Governor |
+| 💿 **Диски** | Использование /, I/O Scheduler |
+| 🌐 **Сеть** | IPv4/IPv6, TCP BBR, RX Buffer, DNS |
+| 🕐 **Время** | Timezone, NTP синхронизация |
+| 🔒 **Безопасность** | Firewall, SELinux/AppArmor, Entropy |
+| 📊 **Лимиты** | Open Files, Max Processes |
+| 🐳 **Контейнеры** | Docker статус |
+| 🔊 **Мониторинг** | Broadcast/Multicast шум (3 сек) |
+| 📬 **Порты** | HTTP (80), HTTPS (443) |
+| 📧 **SMTP** | Gmail и Mail.ru (25/465) — исходящие |
+| 🚀 **Benchmark** | YABS (опционально) |
 
-## ⚙️ Зависимости
+## ✨ Особенности
 
-Скрипт автоматически установит недостающие пакеты:
-- `ethtool`
-- `tcpdump`  
-- `curl`
+- 🔧 **Автоустановка зависимостей** — ethtool, tcpdump, curl
+- 📄 **Логирование** — результаты сохраняются в `/var/log/vps_audit_*.log`
+- 🛡️ **Strict mode** — `set -euo pipefail` для надёжности
+- 🎨 **Цветной вывод** — с автоотключением при pipe
+
+## ⚙️ Требования
+
+- **Root-доступ** (для ethtool, tcpdump, dmesg)
+- **Bash 4+**
+- Поддерживаемые ОС: Ubuntu, Debian, CentOS, RHEL, Rocky, Alma
 
 ## 📄 Лицензия
 
