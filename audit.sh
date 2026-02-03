@@ -272,12 +272,14 @@ fi
 
 # Entropy
 ENTROPY=$(cat /proc/sys/kernel/random/entropy_avail 2>/dev/null || echo "0")
-if [[ "$ENTROPY" -gt 1000 ]]; then
-    echo -e "🎲 Entropy: ${GREEN}$ENTROPY (Достаточно)${NC}"
-elif [[ "$ENTROPY" -gt 200 ]]; then
-    echo -e "🎲 Entropy: ${YELLOW}$ENTROPY (Низковато)${NC}"
+POOL_SIZE=$(cat /proc/sys/kernel/random/poolsize 2>/dev/null || echo "4096")
+
+if [[ "$ENTROPY" -eq "$POOL_SIZE" ]] || [[ "$ENTROPY" -gt 1000 ]]; then
+    echo -e "🎲 Entropy: ${GREEN}$ENTROPY / $POOL_SIZE (Отлично)${NC}"
+elif [[ "$ENTROPY" -gt 100 ]]; then
+    echo -e "🎲 Entropy: ${YELLOW}$ENTROPY / $POOL_SIZE (Норма)${NC}"
 else
-    echo -e "🎲 Entropy: ${RED}$ENTROPY (КРИТИЧЕСКИ МАЛО!)${NC}"
+    echo -e "🎲 Entropy: ${RED}$ENTROPY (КРИТИЧЕСКИ МАЛО)${NC}"
 fi
 
 # Лимиты
