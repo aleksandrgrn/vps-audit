@@ -369,9 +369,9 @@ echo -e "${YELLOW}Проверка на Gmail:${NC}"
 check_smtp_outbound "smtp.gmail.com" 25 "SMTP"
 check_smtp_outbound "smtp.gmail.com" 465 "SMTPS"
 
-echo -e "\n${YELLOW}Проверка на Mail.ru:${NC}"
-check_smtp_outbound "smtp.mail.ru" 25 "SMTP"
-check_smtp_outbound "smtp.mail.ru" 465 "SMTPS"
+echo -e "\n${YELLOW}Проверка на Yahoo:${NC}"
+check_smtp_outbound "smtp.mail.yahoo.com" 25 "SMTP"
+check_smtp_outbound "smtp.mail.yahoo.com" 465 "SMTPS"
 
 set -e
 
