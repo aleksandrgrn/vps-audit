@@ -37,7 +37,7 @@ curl -sL https://raw.githubusercontent.com/aleksandrgrn/vps-audit/master/audit.s
 | 🐳 **Контейнеры** | Docker статус |
 | 🔊 **Мониторинг** | Broadcast/Multicast шум (3 сек) |
 | 📬 **Порты** | HTTP (80), HTTPS (443) |
-| 📧 **SMTP** | Gmail и Mail.ru (25/465) — исходящие |
+| 📧 **SMTP** | Gmail и Yahoo (25/465) — исходящие |
 | 🚀 **Benchmark** | YABS (опционально) |
 
 ## ✨ Особенности
