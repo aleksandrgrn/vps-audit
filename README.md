@@ -11,7 +11,7 @@
 ## 🚀 Быстрый старт
 
 ```bash
-curl -sL https://is.gd/LLoGt2 | sudo bash
+curl -sL https://tinyurl.com/52rk5596 | sudo bash
 ```
 
 <details>
